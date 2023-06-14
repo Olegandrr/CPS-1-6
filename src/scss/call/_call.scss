@@ -1,0 +1,96 @@
+.dialog-call {
+  border: none;
+  padding: 0;
+  margin: 0;
+  position: fixed;
+
+  animation-name: open;
+  -webkit-animation-duration: .7s;
+  animation-duration: .7s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+  min-height: 100%;
+  min-width: 100%;
+
+  .call {
+    min-height: 100%;
+    overflow: visible;
+    max-width: 360px;
+    background-color: rgba(255,255,255, 0.2);
+    box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2),
+      -2px 0px 4px rgba(69, 79, 126, 0.02);
+    border-radius: 1px;
+    transition: all 0.3s linear;
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      padding: 24px 16px;
+
+      @media (min-width: 768px) {
+        padding: 24px 32px;
+      }
+    }
+
+    &__text {
+      position: relative;
+      font-family: $font-family_1;
+      font-size: 24px;
+      line-height: 40px;
+      letter-spacing: -0.6px;
+      margin: 0;
+      margin-bottom: 24px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -16px;
+        width: 4px;
+        height: 100%;
+        background-color: #41f6d7;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+
+        @media (min-width: 768px) {
+          left: -32px;
+        }
+      }
+    }
+
+    &__close-btn {
+      margin-bottom: 40px;
+      background-color: #ff3e79;
+      background-image: url("~/src/img/burger-close.svg");
+
+      @media (min-width: 1120px) {
+        position: fixed;
+        left: 785px;
+        background-color: #ff3e79;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .call {
+      max-width: 440px;
+    }
+  }
+
+  @media (min-width: 1120px) {
+    width: 440px;
+    margin-left: 850px;
+
+    &::backdrop {
+      background: white;
+      opacity: 0.9;
+    }
+
+    .call {
+      border-left: 1px solid #d9fff5;
+      overflow: visible;
+      box-shadow: none;
+    }
+  }
+}

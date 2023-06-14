@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 88px;
+  border-bottom: 1px solid #D9FFF5;
+  background: $background-color_1;
+
+
+&__divider {
+  height: 32px;
+  width: 2px;
+  background-image: url("~/src/img/divider.svg");
+}
+}
+
+@media (min-width: 768px) {
+	
+  .elements--mobile--none {
+		display: flex;
+		gap: 16px;
+	}
+	.header__call-msg-profile {
+		margin-left: 241px;
+	}
+}
+
+@media (min-width: 1120px) {
+	.header {
+		display: none;
+	}
+}

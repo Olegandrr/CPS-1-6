@@ -1,0 +1,36 @@
+.footer__container {
+	display: flex;
+	flex-direction: column;
+	padding: 16px;
+	border-top: 1px solid #d9fff5;
+	>* {
+		flex: 1;
+		margin-bottom: 16px;
+		text-align: center;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 16px;
+		color: #7e7e82;
+		mix-blend-mode: normal;
+		opacity: 0.72;
+	}
+}
+@media (min-width: 768px) {
+	.footer__container {
+		flex-direction: row;
+		padding: 32px 24px;
+	
+	.footer__team {
+		text-align: left;
+	}
+	.footer__info {
+		text-align: right;
+	}
+  }
+}
+@media (min-width: 1120px) {
+	.footer__container {
+		flex-direction: row;
+		padding: 32px;
+	}
+}

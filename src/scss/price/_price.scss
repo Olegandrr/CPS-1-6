@@ -1,0 +1,166 @@
+.price {
+  border-top: 1px solid #d9fff5;
+
+&__list {
+  cursor: -webkit-grab;
+  cursor: grab;
+  
+}
+
+&__item {
+  position: relative;
+  background-color: #ffffff;
+  width: 260px !important;
+  height: 200px !important;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+  margin-top: 16px;
+  margin-left: 8px;
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-shrink: 0;
+} 
+
+&__column-name {
+  align-self: flex-start;
+  font-family: $font-family_2;
+  font-size: 14px;
+  line-height: 16px;
+  color: $color_2;
+  margin: 0;
+  padding-left: 16px;
+  padding-top: 16px;
+  text-align: left;
+}
+
+&__type-of-service {
+  font-family: $font-family_3;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  color: $color_1;
+  margin: 0;
+  padding-left: 16px;
+  padding-top: 4px;
+}
+
+&__cost {
+  font-family: $font-family_3;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  color: $color_1;
+  margin: 0;
+  padding-left: 16px;
+  padding-top: 4px;
+}
+
+&__period {
+  font-family: $font-family_3;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  color: $color_1;
+  margin: 0;
+  padding-left: 16px;
+  padding-top: 4px;
+}
+
+&__button--position {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  margin: 0;
+}
+
+&__terms {
+  font-family: $font-family_3;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: $color_1;
+  margin: 0;
+  padding: 16px;
+  background-color: $background-color_3;
+
+}
+
+  &__offer {
+  text-decoration: none;
+  font-family: $font-family_2;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: $color_1;
+}
+}
+.table {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .price__swiper--off {
+    display: none;
+  }
+  .table {
+    display: table;
+  }
+
+  .table-wrapper {
+    padding: 0 24px 16px 24px;
+    background-color: $background-color_3;
+    
+   
+  }
+
+  .table__head {
+    background-color: $background-color_3;
+    font-weight: 500;
+  }
+
+  .table {
+    border-spacing: 0;
+    width:100%;
+    background-color: $background-color_1;
+  }
+
+  .price__period {
+    padding-right: 16px;
+    }
+
+  .table__row {
+    height: 64px;
+    position: relative;
+  }
+
+  .table__row:not(:last-of-type)::after {
+    position: absolute;
+    content: "";
+    display: block;
+    left: 16px;
+    bottom: 0;
+    width: 95%;
+    height: 1px;
+    background-color: #EAEAEA;
+  }
+
+  .price__terms {
+    padding-left: 24px;
+    width: 421px;
+  }
+}
+
+@media (min-width: 1120px) {
+  
+  .table-wrapper {
+    padding: 0 32px 16px 32px;
+    
+  }
+  .price__terms {
+      padding-left: 32px;
+      
+    }
+  
+}

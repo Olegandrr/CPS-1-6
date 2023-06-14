@@ -1,0 +1,161 @@
+.dialog-side-menu {
+	border: none;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	width: 100%;
+	min-height: 100%;
+	right: 0;
+	top: 0;
+	overflow: visible;
+	z-index: 100;
+	animation-name: open;
+	-webkit-animation-duration: .7s;
+	animation-duration: .7s;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+.side-menu {
+	min-height: 100%;
+	margin: 0;
+	background: $background-color_1;
+}
+.header-side-menu {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding-top: 18px;
+	padding-left: 16px;
+	padding-right: 16px;
+}
+.header-side-menu__logo {
+	flex-grow: 0;
+	width: 97px;
+	height: 51px;
+	margin-right: auto;
+	margin-left: 16px;
+}
+.side-menu_list {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	margin: 0;
+	padding-top: 26px;
+	padding-bottom: 32px;
+	padding-left: 0;
+	list-style-type: none;
+}
+.side-menu__link--text-style {
+	text-decoration: none;
+	color: $color_1;
+	font-family: $font-family_2;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: -0.2px;
+	transition: color 1s ease-out;
+	&:before {
+		content: "";
+		margin-right: 20px;
+		margin-left: 0px;
+		border-right: 4px solid transparent;
+		border-top-right-radius: 20px;
+		border-bottom-right-radius: 20px;
+		transition: border-right 0.8s ease-out;
+	}
+	&:hover {
+		&:before {
+			border-right: 4px solid #41F6D7;
+		}
+		color: $color_2;
+	}
+}
+.side-menu__button--call-msg-profile--position {
+	display: flex;
+	padding-left: 16px;
+	gap: 16px;
+}
+.side-menu__footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.side-menu__contacts {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	padding-top: 16px;
+	padding-left: 16px;
+}
+.side-menu-footer__link--text--style {
+	text-decoration: none;
+	color: $color_1;
+	font-family: $font-family_2;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: -0.2px;
+	transition: 1s ease-out;
+	&:hover {
+		color: $color_2;
+	}
+}
+.side-menu__lang--list--horizontal {
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+	padding: 0;
+	padding-left: 16px;
+	gap: 7px;
+}
+.side-menu__telefon--text--style {
+	font-family: $font-family_1;
+	font-size: 24px;
+	line-height: 32px;
+	letter-spacing: -0.6px;
+}
+@media (min-width: 768px) {
+  .dialog-side-menu {
+		height: 100%;
+		width: 320px;
+		overflow: visible;
+	}
+	.side-menu {
+		box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2);
+		transition: box-shadow 2s ease-out 0.5s;
+		overflow: visible;
+	
+	
+	&_list {
+		padding-top: 50px;
+		padding-bottom: 268px;
+		gap: 32px;
+	}
+	&__lang--list--horizontal {
+		padding-top: 40px;
+	}
+}
+}
+@media (min-width: 1120px) {
+	.dialog-side-menu {
+		display: block;
+		width: 306px;
+		position: absolute;
+		left: -305px;
+		top: 0;
+		height: 100%;
+	}
+	.side-menu {
+		box-shadow: none;
+	
+	&_list {
+		padding-top: 37px;
+		padding-bottom: 241px;
+		gap: 28px;
+	}
+	}
+	.header-side-menu {
+		padding-top: 35px;
+	}
+	.button--burger-close--img {
+		display: none;
+	}
+}

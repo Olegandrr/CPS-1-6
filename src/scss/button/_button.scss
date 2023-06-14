@@ -1,0 +1,107 @@
+.button {
+	width: 40px;
+	height: 40px;
+	border: none;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: transform 0.5s ease-out;
+	&:hover {
+		transform: scale(120%);
+	}
+}
+.button-devices--position {
+	align-self: flex-end;
+	margin-bottom: 16px;
+	margin-right: 16px;
+}
+.button--burger-close--img {
+	background-image: url("~/src/img/burger-close.svg");
+}
+.button--search--img {
+	background-image: url("~/src/img/search.svg");
+}
+.button--go--img {
+	background-image: url("~/src/img/go.svg");
+}
+.button--burger--img {
+	background-image: url("~/src/img/burger.svg");
+}
+.button--call--img {
+	background-image: url("~/src/img/call.svg");
+}
+.button--repair--img {
+	background-image: url("~/src/img/repair.svg");
+}
+.button--checkstatus--img {
+	background-image: url("~/src/img/checkstatus.svg");
+}
+.button--chat--img {
+	background-image: url("~/src/img/chat.svg");
+}
+.button--profile--img {
+	background-image: url("~/src/img/profile.svg");
+}
+.show-more-button {
+	display: none;
+}
+.show-more--active {
+	&::before {
+		transform: rotate(-180deg) translateY(7px);
+		transition: transform 0.5s;
+	}
+}
+.order-button {
+	width: 119px;
+	height: 32px;
+	background-color: #FF3E79;
+	border: none;
+	border-radius: 16px;
+	padding: 0;
+	cursor: pointer;
+	background-image: url("~/src/img/dropdown.svg");
+	background-repeat: no-repeat;
+	background-position: 96px center;
+	text-align: left;
+	padding-left: 12px;
+	font-family: $font-family_1;
+	font-size: 12px;
+	line-height: 24px;
+	letter-spacing: -0.15px;
+	color: $color_3;
+	transition: transform .3s ease-in-out, background-position .3s ease-in-out;
+	&:hover {
+		transform: scale(1.05);
+		background-size: 7%;
+		background-position: 99px center;
+	}
+}
+@media (min-width: 768px) {
+	.show-more-button {
+		display: flex;
+		gap: 17px;
+		background-color: transparent;
+		border: none;
+		padding: 0;
+		font-family: $font-family_2;
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: -0.2px;
+		color: $color_1;
+		padding-top: 24px;
+		padding-bottom: 34px;
+		padding-left: 32px;
+		cursor: pointer;
+		transition: color 0.5s ease-in;
+		&::before {
+			content: url("/src/img/read-more.svg");
+		}
+		&:hover {
+			color: rgb(0, 238, 255);
+		}
+	}
+}
+@media (min-width: 1120px) {
+	.show-more-button {
+		padding-left: 39px;
+	}
+}

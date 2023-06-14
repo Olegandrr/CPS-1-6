@@ -1,0 +1,19 @@
+@import '../libs/normalize.css';
+@import '_var.scss' ;
+@import '_fonts.scss';
+@import './body/_body.scss';
+@import './brands/_brands.scss';
+@import './button/_button.scss';
+@import './devices/_devices.scss';
+@import './footer/_footer.scss';
+@import './header/_header.scss';
+@import './main/_main.scss';
+@import './swiper/_swiper.scss';
+@import './price/_price.scss';
+@import './menu/_menu.scss';
+@import './call/_call.scss';
+@import './feedback/_feedback.scss';
+@import './modalForm/_forms.scss';
+
+
+
